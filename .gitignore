@@ -1,0 +1,21 @@
+# Log files
+logs
+*.log
+npm-debug.log*
+
+# Dependency directory
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Editor settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Linter and formatter caches
+.eslintcache
+.prettiercache

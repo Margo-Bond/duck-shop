@@ -2,11 +2,106 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public//duck-icon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/duck-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DuckShop</title>
   </head>
   <body>
+    <header class="header container">
+      <div class="header__container">
+        <a href="/" class="header__logo">
+          <img src="/duck-icon.svg" alt="Duck logo" class="logo__icon" />
+          <p class="logo__text">
+            <span class="logo__text--primary">Duck</span
+            ><span class="logo__text--secondary">Shop</span>
+          </p>
+        </a>
+
+        <nav class="nav header__nav header__nav--desktop">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--active">
+              <a href="#" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item chevron-down">
+              <button class="chevron-down__toggle nav__link" type="button">
+                Каталог
+                <span class="chevron-down__icon">
+                  <img
+                    src="./src/assets/images/chevron-down.svg"
+                    alt="Каталог"
+                  />
+                </span>
+              </button>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__controls">
+          <button class="icon-btn icon-btn--basket" aria-label="Корзина">
+            <img src="./src/assets/images/basket-icon.svg" alt="Корзина" />
+          </button>
+
+          <button
+            class="btn btn--primary header__callback header__callback--tabl-desk"
+          >
+            Заказать обратный звонок
+          </button>
+
+          <button
+            class="icon-btn icon-btn--menu header__burger"
+            aria-label="Меню"
+            data-menu-toggle
+          >
+            <img src="./src/assets/images/burger-icon.svg" alt="Меню" />
+          </button>
+        </div>
+
+        <div class="header__menu--mob-tabl" data-menu>
+          <button
+            class="header__close"
+            aria-label="Закрыть меню"
+            data-menu-close
+          >
+            <img src="./src/assets/images/close-icon.svg" alt="Закрыть" />
+          </button>
+
+          <nav class="nav header__nav--mob-tabl">
+            <ul class="nav__list">
+              <li class="nav__item nav__item--active">
+                <a href="#" class="nav__link">Главная</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Каталог</a>
+              </li>
+              <li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Отзывы</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+            class="btn btn--primary header__callback header__callback--mobile"
+          >
+            Заказать обратный звонок
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container hero__content"></div>
+    </section>
+    <section class="categories">
+      <div class="container categories__list"></div>
+    </section>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

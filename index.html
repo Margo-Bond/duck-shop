@@ -7,7 +7,7 @@
     <title>DuckShop</title>
   </head>
   <body>
-    <header class="header container">
+    <header class="container header">
       <div class="header__container">
         <a href="/" class="header__logo">
           <img src="/duck-icon.svg" alt="Duck logo" class="logo__icon" />
@@ -16,7 +16,6 @@
             ><span class="logo__text--secondary">Shop</span>
           </p>
         </a>
-
         <nav class="nav header__nav header__nav--desktop">
           <ul class="nav__list">
             <li class="nav__item nav__item--active">
@@ -27,7 +26,7 @@
                 Каталог
                 <span class="chevron-down__icon">
                   <img
-                    src="./src/assets/images/chevron-down.svg"
+                    src="./src/assets/icons/chevron-down.svg"
                     alt="Каталог"
                   />
                 </span>
@@ -40,36 +39,31 @@
             </li>
           </ul>
         </nav>
-
         <div class="header__controls">
           <button class="icon-btn icon-btn--basket" aria-label="Корзина">
-            <img src="./src/assets/images/basket-icon.svg" alt="Корзина" />
+            <img src="./src/assets/icons/basket-icon.svg" alt="Корзина" />
           </button>
-
           <button
             class="btn btn--primary header__callback header__callback--tabl-desk"
           >
             Заказать обратный звонок
           </button>
-
           <button
             class="icon-btn icon-btn--menu header__burger"
             aria-label="Меню"
             data-menu-toggle
           >
-            <img src="./src/assets/images/burger-icon.svg" alt="Меню" />
+            <img src="./src/assets/icons/burger-icon.svg" alt="Меню" />
           </button>
         </div>
-
         <div class="header__menu--mob-tabl" data-menu>
           <button
             class="header__close"
             aria-label="Закрыть меню"
             data-menu-close
           >
-            <img src="./src/assets/images/close-icon.svg" alt="Закрыть" />
+            <img src="./src/assets/icons/close-icon.svg" alt="Закрыть" />
           </button>
-
           <nav class="nav header__nav--mob-tabl">
             <ul class="nav__list">
               <li class="nav__item nav__item--active">
@@ -87,7 +81,6 @@
               </li>
             </ul>
           </nav>
-
           <button
             class="btn btn--primary header__callback header__callback--mobile"
           >
@@ -96,11 +89,74 @@
         </div>
       </div>
     </header>
-    <section class="hero">
-      <div class="container hero__content"></div>
-    </section>
-    <section class="categories">
-      <div class="container categories__list"></div>
+
+    <section class="container hero">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">
+            <span class="hero__title-word hero__title-word--first">Много</span>
+            <span class="hero__title-word hero__title-word--second"
+              >уточек</span
+            >
+          </h1>
+          <div class="hero__description">
+            <p class="hero__subtitle">
+              Маленький друг найдётся для каждого в этом кряквенно жёлтом мире
+            </p>
+            <button class="btn btn--secondary hero__button">
+              Смотреть уточек
+            </button>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <picture class="hero__duck">
+            <source
+              srcset="./src/assets/images/duck-desktop.png"
+              media="(min-width: 1280px)"
+              type="image/png"
+            />
+            <source
+              srcset="./src/assets/images/duck-tablet.png"
+              media="(min-width: 960px)"
+              type="image/png"
+            />
+            <img
+              src="./src/assets/images/duck-mobile.png"
+              alt="Уточка"
+              class="hero__duck-img"
+            />
+          </picture>
+          <img
+            src="./src/assets/images/krya.svg"
+            alt="Кря"
+            class="hero__krya"
+          />
+        </div>
+
+        <div class="hero__categories">
+          <ul class="category-list">
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Классические</a>
+            </li>
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Уточки панки</a>
+            </li>
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Супергерои</a>
+            </li>
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Милые</a>
+            </li>
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Для детей</a>
+            </li>
+            <li class="category-list__item">
+              <a href="#" class="category-list__link">Взрослым</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
     <script type="module" src="/src/main.js"></script>
   </body>

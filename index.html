@@ -202,7 +202,6 @@
             Заказать обратный звонок
           </button>
         </div>
-        <div class="backdrop" data-menu-backdrop></div>
       </div>
     </header>
 
@@ -273,6 +272,77 @@
           </ul>
         </div>
       </div>
+
+      <div class="popup popup--mobile" hidden>
+        <button class="popup__close" aria-label="Закрыть">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="26" height="26" rx="13" fill="white" />
+            <path
+              d="M13 13L16.5356 16.5355M9.46449 16.5355L13 13L9.46449 16.5355ZM16.5356 9.46447L13 13L16.5356 9.46447ZM13 13L9.46449 9.46447L13 13Z"
+              stroke="#B9B9B9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <form class="popup__form">
+          <label
+            >Имя *<input type="text" placeholder="Введите ваше имя" required
+          /></label>
+          <label
+            >Телефон *<input type="tel" placeholder="+7 000 000 00 00" required
+          /></label>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+          <p class="popup__agreement">
+            Нажимая кнопку “Отправить”, вы соглашаетесь с
+            <a href="#">политикой конфиденциальности</a> и
+            <a href="#">договором оферты</a>
+          </p>
+        </form>
+      </div>
+
+      <div class="popup popup--desktop" hidden>
+        <button class="popup__close" aria-label="Закрыть">
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 26 26"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="26" height="26" rx="13" fill="white" />
+            <path
+              d="M13 13L16.5356 16.5355M9.46449 16.5355L13 13L9.46449 16.5355ZM16.5356 9.46447L13 13L16.5356 9.46447ZM13 13L9.46449 9.46447L13 13Z"
+              stroke="#B9B9B9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <form class="popup__form">
+          <label
+            >Имя *<input type="text" placeholder="Введите ваше имя" required
+          /></label>
+          <label
+            >Телефон *<input type="tel" placeholder="+7 000 000 00 00" required
+          /></label>
+          <button class="btn btn--primary" type="submit">Отправить</button>
+          <p class="popup__agreement">
+            Нажимая кнопку “Отправить”, вы соглашаетесь с
+            <a href="#">политикой конфиденциальности</a> и
+            <a href="#">договором оферты</a>
+          </p>
+        </form>
+      </div>
+      <div class="backdrop" data-menu-backdrop></div>
     </section>
     <script type="module" src="/src/main.js"></script>
   </body>

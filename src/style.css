@@ -192,13 +192,19 @@ body {
 .backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transition:
-    opacity 0.3s ease,
-    visibility 0.3s ease;
+    opacity 0.7s ease,
+    visibility 0.7s ease;
   z-index: 9998;
+}
+
+.backdrop[hidden] {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .backdrop--active {
@@ -215,6 +221,10 @@ body {
   border-radius: 8px;
   border: none;
   cursor: pointer;
+  transition:
+    color 0.7s ease,
+    background-color 0.7s ease,
+    border-color 0.7s ease;
 }
 
 .btn--primary {
@@ -253,13 +263,17 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition:
+    color 0.7s ease,
+    background-color 0.7s ease,
+    border-color 0.7s ease;
 }
 
 .icon-btn--basket {
   color: #6b7280;
   border: none;
 }
+
 .icon-btn--basket:hover {
   color: var(--color-secondary);
   border: 1px solid var(--color-secondary);
@@ -392,10 +406,89 @@ body {
   margin-right: 8px;
 }
 
+/* Popup */
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.popup--visible {
+  display: block;
+}
+
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popup__form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.popup__form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.popup__form button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.popup__agreement {
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.popup__agreement a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.popup__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  .popup--mobile:not([hidden]) {
+    display: block;
+  }
+}
+
 /* <= 374px  (Mobile and down) */
 @media (max-width: 374px) {
   .hero__title {
-    font-size: calc(24px + 18vw); /* плавное уменьшение */
+    font-size: calc(24px + 18vw);
   }
   .hero__subtitle {
     font-size: 14px;
@@ -520,6 +613,10 @@ body {
     color: var(--color-text);
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    transition:
+      color 0.7s ease,
+      background-color 0.7s ease,
+      border-color 0.7s ease;
   }
 
   .nav__item--active .nav__link {
@@ -609,9 +706,25 @@ body {
 
   .category-list__item:hover .category-list__link {
     color: var(--color-secondary);
+    transition:
+      color 0.7s ease,
+      background-color 0.7s ease,
+      border-color 0.7s ease;
   }
 
   .category-list__item:hover .category-list__link::before {
     content: url('./src/assets/icons/marc-icon-hover.svg');
+    transition:
+      color 0.7s ease,
+      background-color 0.7s ease,
+      border-color 0.7s ease;
+  }
+
+  .popup--desktop:not([hidden]) {
+    display: block;
+  }
+
+  .popup--mobile {
+    display: none !important;
   }
 }

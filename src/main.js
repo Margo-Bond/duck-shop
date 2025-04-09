@@ -10,6 +10,11 @@ const burgerBtn = document.querySelector('[data-menu-toggle]');
 const closeBtn = document.querySelector('[data-menu-close]');
 const menu = document.querySelector('[data-menu]');
 const backdrop = document.querySelector('[data-menu-backdrop]');
+const popupMobile = document.querySelector('.popup--mobile');
+const popupDesktop = document.querySelector('.popup--desktop');
+const popupCloses = document.querySelectorAll('.popup__close');
+const openPopupBtn = document.querySelector('.header__callback');
+const mobileCallbackBtn = document.querySelector('.header__callback--mobile');
 
 burgerBtn?.addEventListener('click', () => {
   menu?.classList.add('header__menu--mob-tabl--active');
@@ -23,7 +28,28 @@ closeBtn?.addEventListener('click', () => {
 
 backdrop?.addEventListener('click', () => {
   menu?.classList.remove('header__menu--mob-tabl--active');
+  popupMobile?.classList.remove('popup--visible');
+  popupDesktop?.classList.remove('popup--visible');
   backdrop?.classList.remove('backdrop--active');
+});
+
+function openPopup() {
+  const popup = window.innerWidth >= 1280 ? popupDesktop : popupMobile;
+  popup?.classList.add('popup--visible');
+  backdrop?.classList.add('backdrop--active');
+}
+
+function closePopups() {
+  popupMobile?.classList.remove('popup--visible');
+  popupDesktop?.classList.remove('popup--visible');
+  backdrop?.classList.remove('backdrop--active');
+}
+
+openPopupBtn?.addEventListener('click', openPopup);
+mobileCallbackBtn?.addEventListener('click', openPopup);
+
+popupCloses.forEach((btn) => {
+  btn.addEventListener('click', closePopups);
 });
 
 const desktopNav = document.querySelector('.header__nav--desktop');

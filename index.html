@@ -25,10 +25,20 @@
               <button class="chevron-down__toggle nav__link" type="button">
                 Каталог
                 <span class="chevron-down__icon">
-                  <img
-                    src="./src/assets/icons/chevron-down.svg"
-                    alt="Каталог"
-                  />
+                  <svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.5 6L8.5 10L12.5 6"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
                 </span>
               </button>
             </li>
@@ -39,32 +49,136 @@
             </li>
           </ul>
         </nav>
+
         <div class="header__controls">
           <button class="icon-btn icon-btn--basket" aria-label="Корзина">
-            <img src="./src/assets/icons/basket-icon.svg" alt="Корзина" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.33325 7.33333L5.99992 2.66667"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.6667 7.33333L10 2.66667"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1.33325 7.33333H14.6666"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.33325 7.33333L3.39992 12.2667C3.46225 12.5724 3.62982 12.8465 3.87344 13.0414C4.11707 13.2363 4.42132 13.3396 4.73325 13.3333H11.2666C11.8666 13.3333 12.4666 12.8667 12.5999 12.2667L13.7333 7.33333"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6 7.33333L6.66667 13.3333"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3 10.3333H13"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9.99992 7.33333L9.33325 13.3333"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
+
           <button
             class="btn btn--primary header__callback header__callback--tabl-desk"
           >
             Заказать обратный звонок
           </button>
+
           <button
             class="icon-btn icon-btn--menu header__burger"
             aria-label="Меню"
             data-menu-toggle
           >
-            <img src="./src/assets/icons/burger-icon.svg" alt="Меню" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 4H14"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 8H14"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 12H14"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </button>
         </div>
-        <div class="header__menu--mob-tabl" data-menu>
-          <button
-            class="header__close"
-            aria-label="Закрыть меню"
-            data-menu-close
-          >
-            <img src="./src/assets/icons/close-icon.svg" alt="Закрыть" />
-          </button>
-          <nav class="nav header__nav--mob-tabl">
+
+        <div class="header__menu--mob-tabl no-transition" data-menu>
+          <div class="header__logo-wrapper">
+            <a href="/" class="header__logo">
+              <img src="/duck-icon.svg" alt="Duck logo" />
+              <p class="logo__text">
+                <span class="logo__text--primary">Duck</span
+                ><span class="logo__text--secondary">Shop</span>
+              </p>
+            </a>
+
+            <button
+              class="header__close"
+              aria-label="Закрыть меню"
+              data-menu-close
+            >
+              <svg
+                width="26"
+                height="26"
+                viewBox="0 0 26 26"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="26" height="26" rx="13" fill="white" />
+                <path
+                  d="M13 13L16.5356 16.5355M9.46449 16.5355L13 13L9.46449 16.5355ZM16.5356 9.46447L13 13L16.5356 9.46447ZM13 13L9.46449 9.46447L13 13Z"
+                  stroke="#B9B9B9"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <nav class="nav header__nav--mob-tabl no-transition">
             <ul class="nav__list">
               <li class="nav__item nav__item--active">
                 <a href="#" class="nav__link">Главная</a>
@@ -81,12 +195,14 @@
               </li>
             </ul>
           </nav>
+
           <button
             class="btn btn--primary header__callback header__callback--mobile"
           >
             Заказать обратный звонок
           </button>
         </div>
+        <div class="backdrop" data-menu-backdrop></div>
       </div>
     </header>
 
